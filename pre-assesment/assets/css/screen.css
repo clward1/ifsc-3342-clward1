@@ -84,8 +84,17 @@ body {
 }
 
 .alert {
+	padding-left:20px;
 	background-color: blue;
 	color: yellow;
+	width:500px;
+}
+
+.img-right{
+	float:right;
+	border:1px solid #c0c0c0;
+	padding:5px;
+	margin:10px 0px 20px;
 }
 
 h2, h3, h4 {
