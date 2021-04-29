@@ -1,0 +1,102 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*Nicolas Gallagher http://nicolasgallagher.com/micro-clearfix-hack/ */
+/* Start of "Micro clearfix" */
+
+.cf {
+  zoom: 1;
+}
+.cf:before,
+.cf:after {
+  content: "";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+
+/* End of "Micro clearfix" */
+
+
+.container {
+    max-width: 960px;
+    border: 1px solid #000;
+    margin: 15px auto;
+}
+
+/*
+header.primary{
+    width: 930px;
+    background: grey;
+    margin: 15px;
+    padding: 15px;
+    float: left;
+}
+
+#content {
+    width: 510px;
+    margin-left: 15px;
+    background: grey;
+    padding: 15px;
+    float: left;
+}
+
+aside{
+    width: 405px;
+    background: grey;
+    margin-left: 15px;
+    padding: 15px;
+    float: left;
+    border: 5px solid #000;
+}
+
+footer.primary{
+    width: 930px;
+    background: grey;
+    margin: 15px;
+    float: left;
+}
+*/
+
+/*Showing that the below classes work the same way as the above.*/
+
+.col-4 {
+    width: 42.1875%;
+    background: grey;
+    margin-left: 1.5625%;
+    padding: 2.941%;
+    float: left;
+    border: 2.5px solid #000;
+}
+
+.col-5 {
+    width: 53.125%;
+    margin-left: 1.5625%;
+    background: grey;
+    padding: 2.941%;
+    float: left;
+}
+
+.col-9{
+    width: 96.875%;
+    background: grey;
+    margin: 1.5625%;
+    padding: 2.941%;
+    float: left;
+}
+
+footer.primary{
+    width: 96.875%;
+    background: grey;
+    margin: 1.5625%;
+    padding-left: 2.941%;
+    float: left;
+}

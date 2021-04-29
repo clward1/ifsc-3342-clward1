@@ -1,0 +1,103 @@
+/* apply a natural box layout model to all elements, but allowing components to change 
+
+http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+
+*/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*Base CSS*/
+body{font-family: 'Droid Serif';background:#grey; overflow: auto;}
+
+.col {
+  width:46%;
+  margin:1%;
+  background:#5a7b6c;
+  border-radius:6px;
+  padding: 2em;
+  float:left;
+}
+
+.col:nth-child(odd){
+  background:#8fb87f;
+}
+
+.col p{
+  color:#fff;
+  text-shadow: 1px 1px #000;
+}
+
+.fancy{display:none;}
+
+/* Max-Width Query*/
+
+@media screen and (max-width:600px){
+  .col{
+    float:none;
+    width:100%;
+    margin: 20px auto;
+  }
+  
+  .col:nth-child(odd){
+    background:#8fb87f;
+  }
+}
+
+
+/* Ranged Query */
+
+@media screen and (max-width:800px) and (min-width:601px){
+  .col {
+    float:left;
+    width:46%;
+    margin:1%;
+  }
+  
+  .col:nth-child(odd){
+    background:red;
+  }  
+}
+
+@media screen and (max-width: 1099px) and (min-width: 801px){
+  .col{
+    width: 30%;
+    margin 1%;
+  }
+  
+  .col:nth-child(odd){
+    background:purple;
+  }
+}
+
+
+/* Min-width Query */
+@media screen and (min-width:1100px){
+  .col {
+    width:23%;
+    margin:1%;
+  }
+}
+
+@media screen and (min-width:1300px){
+  body{
+    background-color:black;
+  }
+}
+
+  
+/*retina specific --- https://goo.gl/Pgu6y */
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.25),
+only screen and ( min--moz-device-pixel-ratio: 1.25),
+only screen and ( -o-min-device-pixel-ratio: 1.25/1),
+only screen and ( min-device-pixel-ratio: 1.25),
+only screen and ( min-resolution: 200dpi),
+only screen and ( min-resolution: 1.25dppx)
+{
+	.fancy{display:block; text-align:center}
+}

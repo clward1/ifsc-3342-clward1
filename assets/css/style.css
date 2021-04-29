@@ -95,3 +95,33 @@ nav.horizontal ul li a:hover{
     padding: 15px 30px;
     margin:0px auto;
 }
+
+@media screen and (min-width: 600px){
+    #header{
+        background-color: #FCB1A6;
+    }
+    #footer{
+        background-color: #5D2A42;
+    }
+    
+}
+
+@media screen and (min-width: 992px){
+    #header{
+        background-color: #A40E4C;
+    }
+    #footer{
+        background-color: #D96C06;
+    }
+    
+}
+
+@media screen and (min-width: 1200px){
+    #header{
+        background-color: #A1B5D8;
+    }
+    #footer{
+        background-color: #0B3954;
+    }
+    
+}

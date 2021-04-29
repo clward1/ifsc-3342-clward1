@@ -1,0 +1,266 @@
+html{
+    box-sizing:border-box;
+}
+
+*,
+*:before,
+*:after{
+    box-sizing: inherit;
+}
+
+/* Typography */
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Fluid Images */
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+/* Helper Classes */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap; /* 1 */
+}
+
+/* Temporary CSS */
+
+
+
+/* Global Styles */
+
+body{
+    background-color: #D9DDCF;
+    color: #210821;
+    line-height: 1.6;
+}
+
+a:link, a:visited{
+    color: #792428;
+}
+
+.container {
+    margin:0 auto;
+    background-color: #BEC5AD;
+}
+
+nav.primary{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 15px 15px 0px 15px;
+    text-transform:uppercase;
+    font-weight:400;
+}
+
+nav a:link, nav a:visited{
+    border:3px solid #BEC5AD;
+    border-radius: 10px;
+    padding:7px 15px;
+    text-align:center;
+    text-decoration:none;
+    color:#D9DDCF;
+    background:#210821;
+}
+
+nav a:hover{
+    color: #F3C677;
+}
+
+main{
+    padding: 15px 15px;
+}
+
+h1{
+    font-family: 'Raleway', sans-serif;
+    text-align:center;
+}
+
+dl{
+    display:grid;
+    grid-template-rows:auto;
+    grid-template-columns:8em 1fr;
+    background-color:#210821;
+    border:3px solid #210821;
+    padding:15px;
+    color: #D9DDCF;
+    margin-top:0px;
+}
+
+dt{
+    font-weight:700;
+    color: #BEC5AD;
+    border-bottom: 1px solid #BEC5AD;
+    padding:10px 0;
+    grid-column:1;
+}
+
+dd{
+    border-bottom: 1px solid #BEC5AD;
+    padding:10px 0;
+    grid-column:2;
+}
+
+.profilepic{
+    display: block;
+    margin-left: auto;
+    margin-right auto;
+    width: 100%;
+}
+
+.related-links{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.related-links a{
+    margin: 15px 15px 15px 15px;
+    border: 3px solid #BEC5AD;
+    padding: 7px 15px;
+    text-align: center;
+    text-decoration: none;
+    text-transform:uppercase;
+    font-weight:700;
+    color: #210821;
+    background: #792428;
+}
+
+.related-links a:hover{
+    color: #F2C069;
+}
+
+.job,
+.certificate {
+  border-bottom: 1px solid #999;
+  padding-bottom: 20px;
+}
+
+.job *[itemprop="jobTitle"],
+.job *[itemprop="name"],
+.job *[itemprop="url"],
+.job *[itemprop="addressLocality"],
+.certificate *[itemprop="name"] {
+  display: block;
+}
+
+.job h3 {
+  margin: 20px 0 0 0;
+}
+
+footer{
+    background-color: #210821;
+    color: #D9DDCF;
+    padding: 15px 15px;
+}
+
+/* Reorder Source Using Grid */
+
+main.container{
+  display: grid;
+  grid-gap: 1em;
+  grid-template-areas:
+    "title"
+    "about"
+    "education"
+    "experience"
+    "skills";
+}
+
+.page-title{
+  grid-area: title;
+}
+#about{
+  grid-area: about;
+}
+#skills{
+  grid-area: skills;
+  border-bottom: 1px solid #999;
+
+}
+#experience{
+  grid-area: experience;
+}
+#education{
+  grid-area: education;
+}
+
+footer{
+  text-align:center;
+}
+
+/*----------------------Tablet Breakpoint-----------------------*/
+
+@media screen and (min-width:768px){
+
+  main.container{
+    max-width:900px;
+    grid-template-columns: 40% auto;
+    column-gap:30px;
+    grid-template-areas:
+      "title title"
+      "about about"
+      "skills experience"
+      "education experience"
+      ". experience";
+      
+  }
+ 
+  /* Nested Grid Example */
+  #about{
+    display:grid;
+    grid-gap:2em;
+    grid-template-columns: 300px 1fr auto;
+    grid-template-areas:
+      "bio details details"
+      "related related related"
+  }
+  
+.bio{
+  grid-area:bio;
+}
+.details{
+  grid-area:details;
+}
+  
+.related-links{
+  grid-area:related;
+  border-bottom:1px solid #999;
+  padding-bottom:50px
+}
+  
+  nav.primary{
+    max-width:900px;
+    margin:0 auto;
+  }
+
+  
+}
+
+
+/*----------------------Desktop Breakpoint-----------------------*/
+
+@media screen and (min-width:992px){
+  main.container{
+    max-width:1000px;
+  }
+  nav.primary{
+    max-width:1000px;
+    margin:0 auto;
+    column-gap:30px;
+  }
+  
+
+  
+}
